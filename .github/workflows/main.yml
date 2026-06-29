@@ -14,8 +14,8 @@ jobs:
 
       - name: Deploy
         run: |
-          rsync -av --delete ./ /home/ubuntu/github-action-ci-cd/
-          cd /home/ubuntu/github-action-ci-cd
+          rsync -av --delete ./ /home/ubuntu/dvps/
+          cd /home/ubuntu/dvps
           npm i
           npm run test
-          pm2 restart prod-node-app
+          pm2 restart nodeapp
